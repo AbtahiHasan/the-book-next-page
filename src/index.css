@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.ui-container {
+    @apply max-w-[1240px] mx-auto
+}
+.book-card {
+    @apply w-full rounded-lg border
+}

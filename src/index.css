@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .ui-container {
-    @apply max-w-[1240px] mx-auto
+    @apply max-w-[1240px] mx-auto px-3
 }
 .book-card {
     @apply w-full rounded-lg border

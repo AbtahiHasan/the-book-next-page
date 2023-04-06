@@ -1,15 +1,35 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Link, useRouteError } from 'react-router-dom'
+import { FaRegSadCry } from "react-icons/fa";
 
 const ErrorPage = () => {
-    return (
-        <> 
-            <Header/>
-            <h1 className='text-9xl text-cener mt-[40%]'>404</h1>
-            <Footer/>
-        </>
-    );
-};
+  const { error, status } = useRouteError()
+  return (
+  <>
+    <Header/>
+    <section className='flex items-center h-screen p-16 bg-gray-100 text-gray-900'>
+      <div className='container flex flex-col items-center justify-center px-5 mx-auto my-8'>
+        <FaRegSadCry className='w-40 h-40 text-yellow-500' />
+        <div className='max-w-md text-center'>
+          <h2 className='mb-8 font-extrabold text-9xl text-yellow-500'>
+            <span className='sr-only'>Error</span>
+            {status || 404}
+          </h2>
+          <p className='text-2xl font-semibold md:text-3xl text-red-800 mb-8'>
+            {error?.message}
+          </p>
+          <Link to='/' className='btn'>
+            Back to homepage
+          </Link>
+        </div>
+      </div>
+    </section>
+    <Footer/>
+  </>
+   
+  )
+}
 
-export default ErrorPage;
+export default ErrorPage

@@ -4,6 +4,7 @@ import ErrorPage from "../pages/ErrorPage";
 import Home from "../pages/Home";
 import Root from "../Root";
 import Books from "../pages/Books";
+import About from "../pages/About";
 const router = createBrowserRouter ([
     {
         path: "/",
@@ -18,6 +19,10 @@ const router = createBrowserRouter ([
                 path: "/books",
                 element: <Books/>,
                 loader: () => fetch("https://api.itbook.store/1.0/new")
+            },
+            {
+                path: "/about",
+                element: <About/>,
             }
         ]
     }

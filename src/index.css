@@ -11,3 +11,9 @@
 .responsive-nav {
     @apply flex gap-3 text-lg flex-col md:flex-row absolute px-8 top-0 w-auto bg-black text-white md:bg-transparent z-50 md:static py-[100px] md:py-0 md:text-black transition-all duration-150 h-screen md:h-auto
 }
+.badge {
+    @apply bg-yellow-300 py-1 px-2 rounded-lg inline-block text-xs
+}
+.btn {
+    @apply bg-[#4c93f6] p-3 text-white rounded
+}
